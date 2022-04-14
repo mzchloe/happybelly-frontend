@@ -1,9 +1,8 @@
-import styles from "./PrivateRoute.module.css";
 
 export function PrivateRoute() {
     return (
         <pre>
-            
+        Private route
         </pre>
     )
 }
