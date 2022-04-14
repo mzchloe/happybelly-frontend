@@ -1,4 +1,3 @@
-import { getDefaultNormalizer } from "@testing-library/react";
 import { createContext } from "react";
 
 export const AuthContext = createContext();
