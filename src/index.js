@@ -4,16 +4,25 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, NotFound } from "./pages";
+import { Home, Places, Account, LandingPage, NotFound } from "./pages";
+import { Signup, Login } from "./components";
+
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route index element={<Home />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<App />}>
+          <Route index element={<LandingPage />} />
+          <Route path="home" element={<Home />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="login" element={<Login />} />
+          <Route path="places" element={<Places />} />
+          <Route path="account" element={<Account />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
