@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+.body {
+  text-align: center;
+}
+
+.textColor {
+  color: black;
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
