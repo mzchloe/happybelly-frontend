@@ -1,0 +1,13 @@
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 0.8em;
+    background: #92C24C;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.link {
+    text-decoration: none;
+}
