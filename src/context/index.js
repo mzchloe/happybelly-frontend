@@ -1,20 +1,49 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
+import { client } from "../client";
 
 export const AuthContext = createContext();
 
 export function AuthContextProvider({ children }) {
+  const [user, setUser] = useState(null);
 
-    const signup = (firstName, lastName, email, username, password) => {
-       // console(firstName, lastName, email, username, password);
+  //saving the token
+  const saveToken = (token) => {
+    localStorage.setItem("token", `Bearer ${token}`);
+  };
+
+  //signup function 
+  const signup = async (firstName, lastName, email, username, password) => {
+    // console.log(firstName, lastName, email, username, password);
+    const response = await client.post("/auth/signup", {
+      firstName,
+      lastName,
+      email,
+      username,
+      password,
+    });
+  };
+
+  //login function 
+  const login = async (email, password) => {
+    try {
+      const response = await client.post("/auth/login", {
+        email,
+        password,
+      });
+      saveToken(response.data.token);
+      //set the user
+      setUser(response.data.user);
+    } catch (error) {
+      console.log(error);
     }
-    const value = {
-        user: {
-            email: "abc@test.com",
-        },
-        signup,
-    };
+  };
 
-    return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+  //values accessible everywhere in the app
+  const value = {
+    user,
+    signup,
+    login,
+  };
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
-
-

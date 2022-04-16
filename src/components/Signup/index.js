@@ -1,6 +1,7 @@
 import styles from "./Signup.module.css";
 import { useState, useContext } from "react";
 import { AuthContext } from "../../context";
+import { Navigate } from "react-router-dom";
 
 export function Signup() {
   const { signup } = useContext(AuthContext);
@@ -12,9 +13,10 @@ export function Signup() {
 
   const handleSubmit = (e) => {
       e.preventDefault();
-      console.log(firstName, lastName, email, username, password);
-     // signup(firstName, lastName, email, username, password);
-
+      //console.log(firstName, lastName, email, username, password);
+      //signup function from src/context
+      signup(firstName, lastName, email, username, password);
+    //Navigate('/login')
   };
 
   return (
