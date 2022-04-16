@@ -1,8 +1,13 @@
-    .signup {
+    .formContainer {
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+    }
+    .signupForm {
         display: flex;
         flex-direction: column;
         margin: 20px;
-        gap: 20px;
+        gap: 10px;
     }
 
     input {
@@ -10,14 +15,15 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        width: 100px;
+        padding: 5px;
     }
 
     .signupBtn {
         background-color: #92C24C;
         border: none;
-        border-radius: 0.8em;
         height: 30px;
         color: white;
         font-weight:bold;
+        padding: 0.5em;
+        text-transform: uppercase;
     }

@@ -2,7 +2,8 @@ import styles from "./Signup.module.css";
 
 export function Signup() {
     return (
-        <form className={styles.signup}>
+        <div className={styles.formContainer}>
+        <form className={styles.signupForm}>
         <h2>Create Account</h2>
             <input
             id="firstName" placeholder="Your first name"/>
@@ -14,7 +15,8 @@ export function Signup() {
             id="email" placeholder="Your email"/>
              <input
             id="password" placeholder="Choose a strong password"/>
-            <button className="signupBtn">Let's go!</button>
+            <button className={styles.signupBtn}>Let's go!</button>
         </form>
+        </div>
     )
 }
