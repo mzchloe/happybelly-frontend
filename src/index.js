@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, Places, Account, LandingPage, NotFound } from "./pages";
+import { Home, Places, Account, LandingPage, Favorites, NotFound } from "./pages";
 import { Signup, Login } from "./components";
 import { AuthContextProvider } from "./context";
 
@@ -20,6 +20,7 @@ root.render(
             <Route path="signup" element={<Signup />} />
             <Route path="login" element={<Login />} />
             <Route path="places" element={<Places />} />
+            <Route path="favorites" element={<Favorites />} />
             <Route path="account" element={<Account />} />
             <Route path="*" element={<NotFound />} />
           </Route>
