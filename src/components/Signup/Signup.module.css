@@ -2,7 +2,9 @@
         border: 1px solid black;
         display: flex;
         justify-content: center;
+        margin: 15px;
     }
+    
     .signupForm {
         display: flex;
         flex-direction: column;
