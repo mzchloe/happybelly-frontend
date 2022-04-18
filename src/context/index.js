@@ -83,6 +83,7 @@ navigate('/login')
     user,
     signup,
     login,
+    logout,
   };
 
 
