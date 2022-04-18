@@ -1,18 +1,21 @@
 
 .landingPageContainer {
+    border: 1px solid black;
+    height: 50vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.landingPageBtn {
-    background-color: #92C24C;
-    border: none;
-    border-radius: 0.8em;
+    margin: 15px;
+    gap: 10px;
 }
 
-button {
+.signupBox, .loginBox {
+    border: 1px solid black;
     display: flex;
-    flex-direction: column;
+    height: 20vh;
+    width: 50vw;    
+    justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
+
