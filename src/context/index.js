@@ -15,6 +15,11 @@ export function AuthContextProvider({ children }) {
     localStorage.setItem("token", `Bearer ${token}`);
   };
 
+  //delete token when logging out
+  const deleteToken = () => {
+    localStorage.removeItem('token');
+  }
+
   //signup function 
   const signup = async (firstName, lastName, email, username, password) => {
    try {
@@ -59,6 +64,13 @@ navigate('/login')
     } catch (error) {
       navigate('/')
     }
+  }
+
+  //logout function 
+  const logout = () => {
+    deleteToken()
+    setUser()
+    navigate('/')
   }
 
   //to execute our verify function just once when the app starts
