@@ -1,25 +1,20 @@
 import styles from "./LandingPage.module.css";
-//import { Signup, Login } from "../../components"; 
+//import { Signup, Login } from "../../components";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { AuthContext } from "../../context";
+
 
 export function LandingPage() {
-  //get the user 
-  const {user} = useContext(AuthContext);
-    return (
-        <div className={styles.landingPageContainer}>
-         <code>{JSON.stringify(user)}</code>
-       {/*   <Login />
+
+  return (
+    <div className={styles.landingPageContainer}>
+      {/*   <Login />
          <Signup /> */}
-        <p> 
-        <button className={styles.landingPageBtn}>
-        <Link to="/signup">Signup</Link>
-        </button>
-        <button className={styles.landingPageBtn}>
-        <Link to="/login">Login</Link></button>
-        </p>
-       
-        </div>
-    )
+      <div className={styles.signupBox}>
+        <Link to="/signup">New Member</Link>
+      </div>
+      <div className={styles.loginBox}>
+        <Link to="/login">Already Member</Link>
+      </div>
+    </div>
+  );
 }
