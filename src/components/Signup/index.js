@@ -16,7 +16,6 @@ export function Signup() {
       //console.log(firstName, lastName, email, username, password);
       //signup function from src/context
       signup(firstName, lastName, email, username, password);
-    //Navigate('/login')
   };
 
   return (
