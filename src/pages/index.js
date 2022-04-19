@@ -4,3 +4,5 @@ export { NotFound } from "./NotFound";
 export { Places } from "./Places";
 export { Account } from "./Account";
 export { Favorites } from "./Favorites";
+export { PlacesPrivate } from  "./PlacesPrivate";
+export { MyPlaces } from "./MyPlaces";
