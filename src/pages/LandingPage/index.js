@@ -10,10 +10,10 @@ export function LandingPage() {
       {/*   <Login />
          <Signup /> */}
       <div className={styles.signupBox}>
-        <Link to="/signup">New Member</Link>
+        <Link to="/signup">JOIN FOR FREE</Link>
       </div>
       <div className={styles.loginBox}>
-        <Link to="/login">Already Member</Link>
+        <Link to="/login">Already Member?<p>Login Here</p></Link>
       </div>
     </div>
   );
