@@ -29,3 +29,19 @@ p {
 .description {
     font-size: 0.7em;
 }
+
+.btnContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.comments {
+    display: flex;
+    justify-content: flex-end;
+}
