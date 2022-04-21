@@ -19,15 +19,15 @@ export function Place({ place }) {
       <span className={styles.published}>Published: {place.createdAt}</span>
       <span className={styles.diet}>Dietary Type:{place.dietaryType}</span> 
       <p className={styles.description}>{place.description}</p>
+      {/* Show delete/edit for the owner of this review */}
       <div className={styles.btnContainer}>
-      <div className={styles.buttons}>
-      {user._id == place.author &&   <button onClick={handleDelete}><MdDelete />
+    {/*   <div className={styles.buttons}>
+      {user._id == place.author && button onClick={handleDelete}><MdDelete />
       </button>
       <MdModeEdit /> 
       </div>
       }
-      
-    
+       */}
      
       <div className={styles.comments}>
           <MdOutlineAddComment />
