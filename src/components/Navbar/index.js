@@ -12,6 +12,7 @@ import {
 } from "react-icons/md";
 
 export function Navbar() {
+    const { user } = useContext(AuthContext)
     const {logout} = useContext(AuthContext);
   return (
     <nav>
@@ -23,6 +24,7 @@ export function Navbar() {
         Login
       </Link>
       {/* display when user is logged in */}
+      
       <Link className={styles.link} to="/home">
         <MdHome />
       </Link>
