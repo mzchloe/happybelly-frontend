@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import styles from './App.module.css';
 import {Outlet} from "react-router-dom";
-import { Navbar, Footer } from "./components";
+import { Navbar, Footer, Copyright } from "./components";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
     <Navbar />
     <Outlet />
     <Footer />
+    <Copyright />
     </div>
   );
 }
