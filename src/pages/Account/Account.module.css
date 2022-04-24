@@ -1,0 +1,10 @@
+.container {
+    overflow: scroll;
+    height: 75vh;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
