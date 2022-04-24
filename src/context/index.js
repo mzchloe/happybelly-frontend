@@ -10,6 +10,15 @@ export function AuthContextProvider({ children }) {
   //setting the user
   const [user, setUser] = useState(null);
 
+  //make place available other places
+  const [places, setPlaces] = useState([]);
+
+  const getPlaces = async () => {
+    const result = await client.get('/place');
+
+    setPlaces(result.data);
+};
+
   //saving the token
   const saveToken = (token) => {
     localStorage.setItem("token", `Bearer ${token}`);
@@ -84,6 +93,8 @@ navigate('/login')
     signup,
     login,
     logout,
+    places, 
+    getPlaces,
   };
 
 
