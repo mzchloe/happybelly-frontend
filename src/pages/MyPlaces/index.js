@@ -26,10 +26,9 @@ export function MyPlaces() {
     return (
         
         <ul className={styles.listContainer}>
-      My Places
       {places.map((place) => {
         return (
-          <div key={place._id}>
+          <div key={place._id} className={styles.card}>
           <Place place={place}/>
           </div>
         );
