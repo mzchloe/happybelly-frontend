@@ -1,12 +1,10 @@
 import styles from "./PlaceForm.module.css";
 import { useState, useContext } from "react";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { client } from "../../client";
 import { AuthContext } from "../../context";
 
-
 export function PlaceForm() {
-
   const [createdAt, setCreatedAt] = useState("");
   //const [author, setAuthor] = useState("");
   const [name, setName] = useState("");
@@ -16,44 +14,54 @@ export function PlaceForm() {
   const [description, setDescription] = useState("");
   const [comments, setComments] = useState("");
 
+  /* let navigate = useNavigate(); */
+
   const handleSubmit = (e) => {
     e.preventDefault();
     //console.log(createdAt, author, name, address, city, dietaryType, description, comments);
     //create Place function
-    const addPlace = async (createdAt, name, address, city, dietaryType, description, comments) => {
-        try {
-     // console.log(createdAt, author, name, address, city, dietaryType, description, comments);
-     const data = await client.post("/place", {
-       createdAt,
-       //author,
-       name,
-       address,
-       city,
-       dietaryType,
-       description,
-       comments,
-     });
-     //navigate('/places')
-        } catch (error) {
-          console.log(error)
-        }
-       };
-       addPlace(createdAt,
-        //author,
-        name,
-        address,
-        city,
-        dietaryType,
-        description,
-        comments)
+    const addPlace = async (
+      createdAt,
+      name,
+      address,
+      city,
+      dietaryType,
+      description,
+      comments
+    ) => {
+      try {
+        // console.log(createdAt, author, name, address, city, dietaryType, description, comments);
+        const data = await client.post("/place", {
+          createdAt,
+          //author,
+          name,
+          address,
+          city,
+          dietaryType,
+          description,
+          comments,
+        });
+        /* navigate('/places') */
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    addPlace(
+      createdAt,
+      //author,
+      name,
+      address,
+      city,
+      dietaryType,
+      description,
+      comments
+    );
   };
 
   return (
     <div className={styles.formContainer}>
-  
       <form onSubmit={handleSubmit} className={styles.addPlace}>
-        <h2>Add New place</h2>
-
+        <h2>Add A Review</h2>
         <input
           id="name"
           value={name}
@@ -92,10 +100,11 @@ export function PlaceForm() {
           value={description}
           onChange={(e) => {
             setDescription(e.target.value);
-          }} 
+          }}
           placeholder="Please share the experience you had with other members, it can be a dish you had, or special request you made.*"
         />
-        <button className={styles.signupBtn}>Add this place!</button>
+        <button className={styles.addBtn}>Submit review</button>
+        <button className={styles.clearBtn}>Clear form</button>
       </form>
     </div>
   );
