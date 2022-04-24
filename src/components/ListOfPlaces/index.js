@@ -2,15 +2,15 @@ import styles from "./ListOfPlaces.module.css";
 import { Place } from "../Place";
 import { client } from "../../client";
 
-export function ListOfPlaces({ places }) {
+export function ListOfPlaces({ places, handleDelete }) {
   return (
     <ul className={styles.listContainer}>
-      List of places
       {places.map((place) => {
         return (
           <div key={place._id}>
-            <Place place={place}
+            <Place place={place} handleDelete={handleDelete}
             />
+            
           </div>
         );
       })}
