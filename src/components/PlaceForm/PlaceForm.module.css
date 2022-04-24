@@ -1,3 +1,8 @@
+.formContainer {
+    overflow: scroll;
+    height: 75vh;
+}
+
 .addPlace {
     /* border: 1px solid black; */
     display: flex;
@@ -5,4 +10,29 @@
     justify-content: center;
     margin: 10px;
     gap: 5px;
+}
+
+input, textarea {
+    border: none;
+    padding: 10px;
+}
+
+.addBtn {
+    border: none;
+    padding: 10px;
+    background-color: #92C24C;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: white;
+    border-radius: 0.8em;
+}
+
+.clearBtn {
+    border: 2px solid #92C24C;
+    background-color: #FEF9DC;
+    color: #92C24C;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 0.8em;
+    
 }
