@@ -1,4 +1,27 @@
 .footer {
-    font-size: 0.5em;
-    margin: 20px;
+    margin-top: 30px;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 40px;
+    gap: 30px;
+ 
+}
+
+/* .home__img, .search__img, .add__img, .favorites__img, .account__img {
+filter: invert(7%) sepia(11%) saturate(892%) hue-rotate(168deg) brightness(88%) contrast(83%);
+} */
+.home__img, .search__img, .add__img, .favorites__img, .account__img {
+    filter: invert(89%) sepia(8%) saturate(3939%) hue-rotate(325deg) brightness(100%) contrast(103%);
+}  
+/* .home__img, .search__img, .add__img, .favorites__img, .account__img {
+    filter: invert(81%) sepia(35%) saturate(422%) hue-rotate(58deg) brightness(88%) contrast(83%);
+} */
+
