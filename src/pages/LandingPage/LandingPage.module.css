@@ -1,21 +1,74 @@
 
 .landingPageContainer {
-    border: 1px solid black;
-    height: 50vh;
+    /* border: 1px solid black; */
+    overflow: scroll;
+    height: 75vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 15px;
+    /* margin: 15px; */
     gap: 10px;
 }
 
-.signupBox, .loginBox {
-    border: 1px solid black;
+.hero {
+    background-image: url("../../img//hero.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    /* opacity: 0.8; */
+    height: 250px;
+    width: 100vw;
+}
+
+.heroText {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: white;
+    /* color: rgba(255, 255, 255, 0.9); */
+    /* width: 70vw; */
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.joinBtn {
+    border: none;
+    padding: 10px;
+    margin-top: 40px;
+    
+    background-color: #92C24C;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: white;
+    border-radius: 0.8em;
+    width: 80vw;
+}
+
+.loginBtn {
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    background-color: #92C24C;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: white;
+    border-radius: 0.8em;
+    width: 80vw;
+}
+
+.text {
+    color: rgba(0, 0, 0, 0.9);
+    text-decoration: none;
+}
+
+/* .signupBox, .loginBox {
+    border: 1px solid green;
     display: flex;
     height: 20vh;
     width: 50vw;    
     justify-content: center;
     align-items: center;
     text-decoration: none;
-}
+} */
 
