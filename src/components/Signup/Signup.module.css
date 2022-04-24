@@ -1,8 +1,12 @@
     .formContainer {
-        border: 1px solid black;
+        /* border: 1px solid black; */
         display: flex;
         justify-content: center;
-        margin: 15px;
+        align-items: center;
+        padding: 20px;
+        overflow: scroll;
+        height: 75vh;   
+
     }
     
     .signupForm {
