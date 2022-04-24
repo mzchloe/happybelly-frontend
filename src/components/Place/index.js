@@ -8,26 +8,29 @@ import {
 import { useContext } from "react";
 import { AuthContext } from "../../context";
 import { client } from "../../client";
+import { useNavigate } from "react-router-dom";
+import { AddComment } from "../AddComment";
+import { Comment } from "../Comment";
 
-export function Place({ place }) {
+export function Place({ place, handleDelete }) {
   //getting the user
   const { user } = useContext(AuthContext);
   //const [place, setPlace] = useState("");
 
-  const handleDelete = () => {
-    client.delete(`/place/${place._id}`);
-  };
-
+  
   //console.log(user._id, place.author._id, place._id)
+let navigate = useNavigate()
 
-/*   const handleEdit = () => {
-    client.put(`/place/${place._id}`);
-  }; */
+  const handleEdit = () => {
+    navigate(`/editPlace/${place._id}`)
+   // client.put(`/place/${place._id}`);
+
+  };
 
   return (
     <div className={styles.placeCard}>
         {user._id === place.author._id && (
-        <button onClick={handleDelete}>Delete</button>
+        <button onClick={() => {handleDelete(place._id)}}>Delete</button>
       )}
       {user._id === place.author._id && (
         <button onClick={handleEdit}>Edit</button>
@@ -41,11 +44,16 @@ export function Place({ place }) {
       <span className={styles.diet}>Dietary Type:{place.dietaryType}</span>
       <p className={styles.description}>{place.description}</p>
       
-      {user._id && <button>Add a comment</button>}
+      {user._id && <button>Comment</button>}
       <button>Show Comments</button>
       {/* <div className={styles.comments}> */}
       {/* <MdOutlineAddComment />
           <MdOutlineModeComment /> */}
+          <AddComment place={place} />
+          <ul>
+            {place.comments.map((comment) => <Comment key={comment._id} comment={comment}/>)}
+          </ul>
+          
     </div>
     /* </div> */
   );
