@@ -2,3 +2,16 @@
     overflow: scroll;
     height: 20vh;
 }
+
+textarea {
+    box-sizing: border-box;
+	border: none;
+	border-radius: 0.2em;
+	resize: none;
+	line-height: 24px;
+	overflow: auto;
+	height: auto;
+    width: 78vw;
+	padding: 8px;
+	box-shadow: 0px 4px 10px -8px black;
+}
