@@ -19,6 +19,13 @@ export function AuthContextProvider({ children }) {
     setPlaces(result.data);
 };
 
+//make comments available other places
+
+/* const getComments = async () => {
+  const result = await client.get('/comment');
+  getComments(result.data);
+} */
+
   //saving the token
   const saveToken = (token) => {
     localStorage.setItem("token", `Bearer ${token}`);
@@ -95,6 +102,7 @@ navigate('/login')
     logout,
     places, 
     getPlaces,
+    getComments,
   };
 
 
