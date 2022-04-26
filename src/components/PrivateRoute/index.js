@@ -9,6 +9,6 @@ export function PrivateRoute({children}) {
     if (user){
         return children;
     } else {
-        return <Navigate to="/Landing" />;
+        return <Navigate to="/" />;
     }    
 }
