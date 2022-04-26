@@ -4,7 +4,7 @@
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 0.8em;
-    text-align: left;
+    text-align: left;    
 }
 
 p {
@@ -41,6 +41,18 @@ p {
     justify-content: flex-start;
 }
 
+.edit, .delete {
+    border: none;   
+    background: none;
+    /* border: 1px solid black; */
+}
+
+.privateBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+    
 .comments {
     display: flex;
     justify-content: flex-end;
