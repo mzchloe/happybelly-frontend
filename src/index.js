@@ -20,6 +20,7 @@ root.render(
             <Route path="signup" element={<Signup />} />
             <Route path="login" element={<Login />} />
             <Route path="places" element={<Places />} />
+          
             <Route path="favorites" element={<Favorites />} />
             <Route path="add" element={<PlaceForm />} />
             <Route path="editPlace/:id" element={<EditPlace />} />
