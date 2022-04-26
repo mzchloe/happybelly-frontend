@@ -15,18 +15,15 @@
     background-image: url("../../img//hero.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    /* opacity: 0.8; */
+    opacity: 0.8;
     height: 250px;
     width: 100vw;
-}
+} 
 
 .heroText {
     font-weight: bold;
     font-size: 1.2em;
-    color: white;
-    /* color: rgba(255, 255, 255, 0.9); */
-    /* width: 70vw; */
-    /* background-color: rgba(0, 0, 0, 0.5); */
+    color: #fea45b;
     text-align: center;
     margin-top: 50px;
     padding: 10px;
