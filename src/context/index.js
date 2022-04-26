@@ -102,7 +102,7 @@ navigate('/login')
     logout,
     places, 
     getPlaces,
-    getComments,
+    //getComments,
   };
 
 
