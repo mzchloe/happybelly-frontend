@@ -2,3 +2,8 @@
     font-size: 0.6em;
     padding: 10px;
 }
+
+.link {
+    text-decoration: none;
+    color: #212427;
+}
