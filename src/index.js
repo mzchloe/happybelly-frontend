@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, Places, Account, LandingPage, Favorites, NotFound } from "./pages";
+import { Home, About, Places, Account, LandingPage, Favorites, NotFound } from "./pages";
 import { Signup, Login, EditPlace, PlaceForm} from "./components";
 import { AuthContextProvider } from "./context";
 
@@ -20,7 +20,7 @@ root.render(
             <Route path="signup" element={<Signup />} />
             <Route path="login" element={<Login />} />
             <Route path="places" element={<Places />} />
-          
+            <Route path="about" element={<About />} />
             <Route path="favorites" element={<Favorites />} />
             <Route path="add" element={<PlaceForm />} />
             <Route path="editPlace/:id" element={<EditPlace />} />
