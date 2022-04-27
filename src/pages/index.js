@@ -6,3 +6,4 @@ export { Account } from "./Account";
 export { Favorites } from "./Favorites";
 export { PlacesPrivate } from  "./PlacesPrivate";
 export { MyPlaces } from "./MyPlaces";
+export { About } from "./About";
