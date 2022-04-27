@@ -5,7 +5,8 @@
     justify-content: center;
     background-color: white;
     margin-top: 10px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+    border: 1px solid lightgray;
 }
 
 .commentBody {
@@ -18,7 +19,14 @@
     font-style: italic;
 }
 
+.comment {
+    font-size: 0.7em;
+}
 .btns {
     display: flex;
     gap: 10px;
+}
+
+.delete {
+    width: 80vw;
 }
