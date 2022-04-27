@@ -1,10 +1,9 @@
 body {
-    background-color: #FEF9DC;
+    /* background-color: #FEF9DC; */
 }
 
 h2 {
     margin: 10px;
-    color: rgba(0, 0, 0, 0.7);
 }
 
 .container {
@@ -22,7 +21,6 @@ h2 {
     margin: 20px;
     background-color: rgba(145, 198, 129, 0.3);
     border-radius: 1.2em;
-    color: rgba(0, 0, 0, 0.7);
 }
 
 .categoryTipsCard {
@@ -34,7 +32,6 @@ h2 {
     margin: 20px;
     background-color: rgba(254, 164, 91, 0.3);
     border-radius: 1.2em;
-    color: rgba(0, 0, 0, 0.7);
 }
 
 .categoryLearnCard {
@@ -46,7 +43,6 @@ h2 {
     margin: 20px;
     background-color: rgba(252, 217, 73, 0.3);
     border-radius: 1.2em;
-    color: rgba(0, 0, 0, 0.7);
 }
 
 .categoryCityCard{
