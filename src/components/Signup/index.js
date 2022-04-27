@@ -1,7 +1,8 @@
 import styles from "./Signup.module.css";
 import { useState, useContext } from "react";
 import { AuthContext } from "../../context";
-import { Navigate } from "react-router-dom";
+import logo from "../../img/happybelly.svg";
+import { Link } from "react-router-dom";
 
 export function Signup() {
   const { signup } = useContext(AuthContext);
@@ -21,7 +22,14 @@ export function Signup() {
   return (
     <div className={styles.formContainer}>
       <form onSubmit={handleSubmit} className={styles.signupForm}>
-        <h2>Create Account</h2>
+      <Link to="/"><img
+          width={250}
+          height={150}
+          className={styles.logo__img}
+          src={logo}
+          alt="logo_image"
+        /></Link>
+        <p>Join our community of foodies who are living with Irritable Bowel Syndrome.</p>
         <input
           id="firstName"
           value={firstName}
@@ -47,7 +55,7 @@ export function Signup() {
           onChange={(e) => {
             setPassword(e.target.value);
           }} placeholder="Choose a strong password" />
-        <button className={styles.signupBtn}>Let's go!</button>
+        <button className={styles.signupBtn}>Sign up</button>
       </form>
     </div>
   );
