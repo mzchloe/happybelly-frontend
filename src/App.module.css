@@ -4,8 +4,27 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size:15px;
+  line-height:1.6;
+  
+@media screen and (min-width:$screen-sm){
+    font-size:16px;
+}
+
+@media screen and (min-width:$screen-lg){
+    font-size:18px;
+}
+
+@media screen and (min-width:$screen-xl){
+    font-size:20px;
+}
+}
+
 .body {
   text-align: center;
+  
 }
 
 .textColor {
@@ -28,3 +47,4 @@
     transform: rotate(360deg);
   }
 }
+
