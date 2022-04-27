@@ -1,6 +1,7 @@
 .formContainer {
     overflow: scroll;
     height: 75vh;
+    margin: 10px;
 }
 
 .addPlace {
@@ -13,8 +14,9 @@
 }
 
 input, textarea {
-    border: none;
+    border: 1px solid lightgray;
     padding: 10px;
+    font-family: inherit;
 }
 
 .addBtn {
@@ -29,10 +31,32 @@ input, textarea {
 
 .clearBtn {
     border: 2px solid #92C24C;
-    background-color: #FEF9DC;
+    /* background-color: #FEF9DC; */
+    background-color: white;
     color: #92C24C;
     text-transform: uppercase;
     padding: 10px;
     border-radius: 0.8em;
     
+}
+
+textarea {
+    box-sizing: border-box;
+	border: none;
+	border-radius: 0.2em;
+	resize: none;
+	line-height: 24px;
+	overflow: auto;
+	height: auto;
+    width: 95vw;
+	padding: 8px;
+	box-shadow: 0px 4px 10px -8px black;
+    font-family: inherit;
+}
+
+span {
+    text-align: start;
+    font-style: italic;
+    font-size: small;
+    color: #212427;
 }
