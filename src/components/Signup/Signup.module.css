@@ -3,7 +3,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px;
+        padding: 10px;
         overflow: scroll;
         height: 75vh;   
 
@@ -12,16 +12,16 @@
     .signupForm {
         display: flex;
         flex-direction: column;
-        margin: 20px;
-        gap: 10px;
+        margin: 15px;
+        padding: 10px;
+        gap: 15px;
+        align-items: center;
+        /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
     }
 
     input {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 5px;
+       width: 80vw;
+       border-radius: 0.8em;
     }
 
     .signupBtn {
@@ -32,4 +32,12 @@
         font-weight:bold;
         padding: 0.5em;
         text-transform: uppercase;
+        width: 80vw;
+        margin-bottom: 20px;
+        border-radius: 0.8em;
+    }
+
+    p {
+        margin-top: 0px;
+        font-weight: 500;
     }
