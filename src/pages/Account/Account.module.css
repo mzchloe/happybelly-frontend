@@ -8,3 +8,9 @@
     color: inherit;
     font-weight: bold;
 }
+
+.reviews {
+    background: none;
+    border: none;
+    font-size: 1em;
+}
