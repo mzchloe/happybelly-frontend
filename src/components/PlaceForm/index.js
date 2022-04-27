@@ -62,6 +62,7 @@ export function PlaceForm() {
     <div className={styles.formContainer}>
       <form onSubmit={handleSubmit} className={styles.addPlace}>
         <h2>Add A Review</h2>
+        <span>* are required fields</span>
         <input
           id="name"
           value={name}
