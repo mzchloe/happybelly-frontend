@@ -63,16 +63,16 @@ export function Place({ place, handleDelete }) {
       <h3 className={styles.name}>{place.name}</h3>
       <span className={styles.city}>{place.city}</span>
       <span className={styles.author}>
-        Author: {place.author.firstName} {place.author.lastName}
+        Added by: {place.author.firstName} {place.author.lastName}
       </span>
       <span className={styles.published}>
-        Published: {place.createdAt.split("T")[0]}
+        Created on: {place.createdAt.split("T")[0]}
       </span>
       {/* <span className={styles.published}>Published: {place.createdAt.split(".")[0].split("T").join(" at ")} </span> */}
-      <span className={styles.diet}>Dietary Type:{place.dietaryType}</span>
+      <span className={styles.diet}>Special diet: {place.dietaryType}</span>
       <p className={styles.description}>{place.description}</p>
 
-      {user._id && <button onClick={toggleComment}> Comment</button>}
+      {user._id && <button onClick={toggleComment}> Add Comment</button>}
       <button onClick={toggleShowComment}>Show Comments</button>
       {/* <div className={styles.comments}> */}
       {/* <MdOutlineAddComment />
