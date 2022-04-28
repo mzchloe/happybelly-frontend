@@ -14,7 +14,7 @@ export function PlaceForm() {
   const [description, setDescription] = useState("");
   const [comments, setComments] = useState("");
 
-  /* let navigate = useNavigate(); */
+  let navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,7 +41,7 @@ export function PlaceForm() {
           description,
           comments,
         });
-        /* navigate('/places') */
+        navigate('/places')
       } catch (error) {
         console.log(error);
       }
@@ -62,7 +62,7 @@ export function PlaceForm() {
     <div className={styles.formContainer}>
       <form onSubmit={handleSubmit} className={styles.addPlace}>
         <h2>Add A Review</h2>
-        <span>* are required fields</span>
+        <span className={styles.form}>* are required fields</span>
         <input
           id="name"
           value={name}
@@ -110,12 +110,4 @@ export function PlaceForm() {
     </div>
   );
 }
-/* 
-const name = "berlinEatery"
-const city = "berlin"
 
-const addPlace = () => {
-    name,
-    city
-}
- */
