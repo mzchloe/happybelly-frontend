@@ -1,6 +1,9 @@
 .container {
     overflow: scroll;
     height: 75vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .link {
@@ -13,4 +16,19 @@
     background: none;
     border: none;
     font-size: 1em;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    margin: 10px;
+    line-height: 1.6em;
+}
+
+.logout {
+    border: none;
+    background-color: inherit;
 }
