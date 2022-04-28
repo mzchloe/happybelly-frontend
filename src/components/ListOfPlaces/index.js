@@ -1,6 +1,6 @@
 import styles from "./ListOfPlaces.module.css";
 import { Place } from "../Place";
-import { client } from "../../client";
+
 
 export function ListOfPlaces({ places, handleDelete }) {
   return (
