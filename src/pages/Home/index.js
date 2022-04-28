@@ -9,12 +9,11 @@ import city from "../../img/city.png";
 import community from "../../img/community.png";
 import { Link } from "react-router-dom";
 
-
 export function Home() {
   //get the user
   const { user } = useContext(AuthContext);
 
-/* Attempt for displaying "Coming Soon" when clicked on 
+  /* Attempt for displaying "Coming Soon" when clicked on 
   const [comingSoon, setComingSoon] = useState(true);
 
   const toggleCategory = () => {
@@ -26,31 +25,33 @@ export function Home() {
   return (
     <div className={styles.container}>
       {user ? <h2>Welcome {user.firstName}</h2> : null}
-      <div className={styles.categoryDiscoverCard}>
-      <div className={styles.image}>
-      <Link className={styles.link} to="/places"><img
-          width={60}
-          height={60}
-          className={styles.restaurant__img}
-          src={restaurant}
-          alt="restaurant_image"
-        /></Link>
+      <Link className={styles.link} to="/places">
+        <div className={styles.categoryDiscoverCard}>
+          <div className={styles.image}>
+            <img
+              width={60}
+              height={60}
+              className={styles.restaurant__img}
+              src={restaurant}
+              alt="restaurant_image"
+            />
+          </div>
+          <div className={styles.category}>
+            <h3>DISCOVER</h3>
+            <p>restaurants</p>
+          </div>
         </div>
-        <div className={styles.category}>
-          <h3>DISCOVER</h3>
-          <p>restaurants</p>
-        </div>
-      </div>
+      </Link>
 
       <div className={styles.categoryTipsCard}>
-      <div className={styles.image}>
-        <img
-          width={60}
-          height={60}
-          className={styles.tips__img}
-          src={tips}
-          alt="tips_image"
-        />
+        <div className={styles.image}>
+          <img
+            width={60}
+            height={60}
+            className={styles.tips__img}
+            src={tips}
+            alt="tips_image"
+          />
         </div>
         <div className={styles.category}>
           <h3>TIPS</h3>
@@ -59,14 +60,14 @@ export function Home() {
       </div>
 
       <div className={styles.categoryLearnCard}>
-      <div className={styles.image}>
-        <img
-          width={60}
-          height={60}
-          className={styles.learn__img}
-          src={learn}
-          alt="learn_image"
-        />
+        <div className={styles.image}>
+          <img
+            width={60}
+            height={60}
+            className={styles.learn__img}
+            src={learn}
+            alt="learn_image"
+          />
         </div>
         <div className={styles.category}>
           <h3>LEARN</h3>
@@ -74,14 +75,14 @@ export function Home() {
         </div>
       </div>
       <div className={styles.categoryCityCard}>
-      <div className={styles.image}>
-        <img
-          width={60}
-          height={60}
-          className={styles.city__img}
-          src={city}
-          alt="city_image"
-        />
+        <div className={styles.image}>
+          <img
+            width={60}
+            height={60}
+            className={styles.city__img}
+            src={city}
+            alt="city_image"
+          />
         </div>
         <div className={styles.category}>
           <h3>EXPLORE</h3>
@@ -89,14 +90,14 @@ export function Home() {
         </div>
       </div>
       <div className={styles.categoryCommunityCard}>
-     <div className={styles.image}>
-        <img
-          width={60}
-          height={60}
-          className={styles.community__img}
-          src={community}
-          alt="community_image"
-        />
+        <div className={styles.image}>
+          <img
+            width={60}
+            height={60}
+            className={styles.community__img}
+            src={community}
+            alt="community_image"
+          />
         </div>
         <div className={styles.category}>
           <h3>MEET</h3>
