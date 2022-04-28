@@ -61,6 +61,9 @@ navigate('/login')
         password,
       });
       saveToken(response.data.token);
+      //try to get the user from /user route
+      const user = await client.get('/user')
+      console.log(user)
       //set the user
       setUser(response.data.user);
       //once user is logged in, we redirect the user
@@ -74,6 +77,8 @@ navigate('/login')
   const verify = async () => {
     try { 
       const response = await client.get('auth/verify')
+      const user = await client.get('/user')
+      console.log(user)
       setUser (response.data.user)
       //if user is correct, we redirect the user to
       navigate('/home')
@@ -102,6 +107,7 @@ navigate('/login')
     logout,
     places, 
     getPlaces,
+    setUser,
     //getComments,
   };
 
