@@ -1,11 +1,15 @@
 body {
-    /* background-color: #FEF9DC; */
+    background-color: #FEF9DC;
 }
 
 h2 {
     margin: 10px;
 }
 
+.link {
+    text-decoration: none;
+    color: #212427;
+}
 .container {
     /* border: 2px solid green; */
     padding: 20px;  
