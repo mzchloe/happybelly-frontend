@@ -3,7 +3,7 @@
     flex-direction: column;
     padding: 20px;
     /* background-color: rgba(255, 255, 255, 0.8); */
-    background-color: rgba(145, 198, 129, 0.2);
+    background-color: white;
     border-radius: 0.8em;
     text-align: left;    
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -43,7 +43,7 @@ p {
     justify-content: flex-start;
 }
 
-.edit, .delete {
+.edit, .delete, .save {
     border: none;   
     background: none;
     /* border: 1px solid black; */
