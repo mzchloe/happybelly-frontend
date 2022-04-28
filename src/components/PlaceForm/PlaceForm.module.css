@@ -10,13 +10,15 @@
     flex-direction: column;
     justify-content: center;
     margin: 10px;
-    gap: 5px;
+    gap: 10px;
 }
 
 input, textarea {
     border: 1px solid lightgray;
     padding: 10px;
     font-family: inherit;
+    width: 90vw;
+    
 }
 
 .addBtn {
@@ -43,18 +45,18 @@ input, textarea {
 textarea {
     box-sizing: border-box;
 	border: none;
-	border-radius: 0.2em;
+	border-radius: 0.8em;
 	resize: none;
 	line-height: 24px;
 	overflow: auto;
 	height: auto;
-    width: 95vw;
+    width: 90vw;
 	padding: 8px;
 	box-shadow: 0px 4px 10px -8px black;
     font-family: inherit;
 }
 
-span {
+.form {
     text-align: start;
     font-style: italic;
     font-size: small;
