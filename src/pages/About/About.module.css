@@ -2,4 +2,12 @@
     margin: 20px;
     overflow: scroll;
     height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+}
+
+p {
+    line-height: 1.6em;
+    margin: 20px;
 }
