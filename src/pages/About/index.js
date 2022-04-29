@@ -23,15 +23,17 @@ export function About() {
           </Link>
         </div>
       )}
-      <p>Hi there! I'm Jeanet and this is my first React App with a mobile-first design
+      <p className={styles.intro}>Hi there! I'm Jeanet and this is my first React App with a mobile-first design
       that I have developed as a final project for Ironhack's full-stack web development bootcamp.</p>
       <p>
-        <i>happybelly</i> is designed for foodies, like me, living with
-        Irritable Bowel Syndrome. This is the first and only community for sharing and 
-        discovering restaurants around the world that are IBS-friendly.
+        <i>happybelly</i> is designed for foodies, who have special dietary 
+        requirements, like low FODMAP because I have Irritable Bowel Syndrome. 
+        This is the first and only community for sharing and discovering 
+        places that are taking care of our dietary needs. 
       </p>
-      <p></p>
     
-    </div>
+      
+    
+    </div>  
   );
 }
