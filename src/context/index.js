@@ -78,7 +78,7 @@ navigate('/login')
     try { 
       const response = await client.get('auth/verify')
       const user = await client.get('/user')
-      console.log(user)
+     // console.log(user)
       setUser (response.data.user)
       //if user is correct, we redirect the user to
       navigate('/home')
