@@ -101,8 +101,8 @@ export function PlaceForm() {
           value={description}
           onChange={(e) => {
             setDescription(e.target.value);
-          }}
-          placeholder="Please share the experience you had with other members, it can be a dish you had, or special request you made.*"
+          }} className={styles.content}
+          placeholder="Share your experiences of this place with other community members"
         />
         <button className={styles.addBtn}>Submit review</button>
         <button className={styles.clearBtn}>Clear form</button>
