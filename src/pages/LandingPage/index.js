@@ -16,7 +16,7 @@ export function LandingPage() {
           alt="logo_image"
         />
         <div className={styles.heroText}>
-        The online community for reviews of restaurants that are suitable for foodies living with Irritable Bowel Syndrome
+        The online community for reviews of restaurants that are suitable for foodies living with special dietary requirements.
 {/* <p>Discover and share your experiences today</p> */}
         </div>
         </div>
