@@ -3,6 +3,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { client } from "../../client";
 import { AuthContext } from "../../context";
 import styles from "./AddComment.module.css";
+import { MdOutlineAddComment } from "react-icons/md";
 
 export function AddComment({ place }) {
   const [comment, setComment] = useState("");
@@ -31,9 +32,13 @@ export function AddComment({ place }) {
         onChange={(e) => {
           setComment(e.target.value);
         }}
-        placeholder="Please share your comment or review of this place"
+        className={styles.comment}
+        placeholder="Share your comment or experience here"
       />
-      <button className={styles.addBtn}>Add Comment</button>
+      <div className={styles.btn}>
+      {/* <MdOutlineAddComment /> */}
+      <button className={styles.addBtn}>Submit</button>
+      </div>
     </form>
   );
 }
