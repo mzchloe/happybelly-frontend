@@ -13,7 +13,7 @@ export function ListOfPlaces({ places, handleDelete }) {
             
           </div>
         );
-      })}
+      }).sort((firstReview, secondReview) => firstReview.createdAt - secondReview.createdAt)}
     </ul>
   );
 }
