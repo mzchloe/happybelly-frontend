@@ -21,7 +21,7 @@ export function Account() {
   return (
     <div className={styles.container}>
       <div className={styles.favorites}>
-        <h3>My Profile</h3>
+        {/* <h3>My Profile</h3> */}
         <div className={styles.profile}>
           <img
             width={60}
