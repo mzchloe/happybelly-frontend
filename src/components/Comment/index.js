@@ -14,23 +14,32 @@ export function Comment({ comment }) {
 
   return (
     <div className={styles.commentCard}>
+      <hr className={styles.lineComments}></hr>
       <div className={styles.commentBody}>
+      
+      <p className={styles.comment}>{comment.comment}</p>
+      
+      <div className={styles.bottom}> 
         <span className={styles.postedBy}>
           Commented on {comment.createdAt.split("T")[0]} by{" "}
           {comment.author.firstName} {comment.author.lastName}
         </span>
-        <p className={styles.comment}>{comment.comment}</p>
+        </div>
+      
+        <div className={styles.btns}>
+      
+      {user._id === comment.author._id && (
+        <div className={styles.deleteIcon}>
+        <MdDelete /><button
+          className={styles.delete}
+          onClick={() => handleDelete(comment._id)}
+        >
+        </button>
+        </div>
+      )}
+    </div>
       </div>
-      <div className={styles.btns}>
-        {user._id === comment.author._id && (
-          <button
-            className={styles.delete}
-            onClick={() => handleDelete(comment._id)}
-          >
-            <MdDelete />
-          </button>
-        )}
-      </div>
+      
     </div>
   );
 }
