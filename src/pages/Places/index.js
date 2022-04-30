@@ -19,10 +19,6 @@ export function Places() {
 
 //this function is moved from Place component
     const handleDelete = async (id) => {
-      /*   const filterPlaces = places.filter((place) => {
-            return place._id !== id
-        })  */
-      
         await client.delete(`/place/${id}`);
         getPlaces()
       };
