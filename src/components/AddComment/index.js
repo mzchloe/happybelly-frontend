@@ -3,7 +3,6 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { client } from "../../client";
 import { AuthContext } from "../../context";
 import styles from "./AddComment.module.css";
-import { MdOutlineAddComment } from "react-icons/md";
 
 export function AddComment({ place }) {
   const [comment, setComment] = useState("");
@@ -14,7 +13,9 @@ export function AddComment({ place }) {
       const data = await client.post(`/comment/${place._id}`, {
         comment,
       });
-    } catch (error) {}
+    } catch (error) {
+      
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -26,6 +27,7 @@ export function AddComment({ place }) {
 
   return (
     <form onSubmit={handleSubmit} className={styles.submit}>
+    {/* <hr className={styles.linebreak}></hr> */}
       <textarea
         id="comment"
         value={comment}
@@ -36,7 +38,6 @@ export function AddComment({ place }) {
         placeholder="Share your comment or experience here"
       />
       <div className={styles.btn}>
-      {/* <MdOutlineAddComment /> */}
       <button className={styles.addBtn}>Submit</button>
       </div>
     </form>
