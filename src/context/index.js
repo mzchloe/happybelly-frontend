@@ -72,7 +72,7 @@ navigate('/login')
       saveToken(response.data.token);
       //try to get the user from /user route
       const user = await client.get('/user')
-      console.log(user.data)
+      //console.log(user.data)
       //set the user
       setUser(user.data);
       //once user is logged in, we redirect the user

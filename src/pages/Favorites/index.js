@@ -5,7 +5,7 @@ import { ListOfPlaces } from "../../components";
 
 export function Favorites(favorites) {
     const { user } = useContext(AuthContext);
-    console.log(user)
+    //console.log(user)
     if (!user) {
         return 'Loading'
     }
