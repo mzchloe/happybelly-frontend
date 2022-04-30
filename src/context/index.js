@@ -19,6 +19,15 @@ export function AuthContextProvider({ children }) {
     setPlaces(result.data);
 };
 
+
+//make favorites available other places 
+const [favorites, setFavorites] = useState([]);
+
+const getFavorites = async () => {
+  const result = await client.get('/user');
+
+  setFavorites(result.data);
+}
 //make comments available other places
 
 /* const getComments = async () => {
@@ -63,9 +72,9 @@ navigate('/login')
       saveToken(response.data.token);
       //try to get the user from /user route
       const user = await client.get('/user')
-      console.log(user)
+      console.log(user.data)
       //set the user
-      setUser(response.data.user);
+      setUser(user.data);
       //once user is logged in, we redirect the user
       navigate('/home')
     } catch (error) {
@@ -79,9 +88,9 @@ navigate('/login')
       const response = await client.get('auth/verify')
       const user = await client.get('/user')
      // console.log(user)
-      setUser (response.data.user)
+      setUser (user.data)
       //if user is correct, we redirect the user to
-      navigate('/home')
+      /* navigate('/home') */
     } catch (error) {
       navigate('/')
     }
@@ -107,6 +116,8 @@ navigate('/login')
     logout,
     places, 
     getPlaces,
+    favorites,
+    getFavorites,
     setUser,
     //getComments,
   };
