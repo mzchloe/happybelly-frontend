@@ -14,7 +14,6 @@ textarea {
 	line-height: 24px;
 	overflow: auto;
 	height: auto;
-    width: 79vw;
 	border: 1px solid grey;
 	/* box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em; */
 }
@@ -37,4 +36,13 @@ textarea {
 
 .comment {
 	font-style: italic;
+	border: 1px solid grey;
+	width: 79vw;
+}
+
+.linebreak {
+	border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
