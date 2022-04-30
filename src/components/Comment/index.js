@@ -30,10 +30,10 @@ export function Comment({ comment }) {
       
       {user._id === comment.author._id && (
         <div className={styles.deleteIcon}>
-        <MdDelete /><button
+        <button
           className={styles.delete}
           onClick={() => handleDelete(comment._id)}
-        >
+        ><MdDelete />
         </button>
         </div>
       )}
