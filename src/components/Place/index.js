@@ -6,7 +6,7 @@ import {
   MdOutlineFavorite,
   MdOutlineFavoriteBorder,
 } from "react-icons/md";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context";
 import { client } from "../../client";
 import { useNavigate } from "react-router-dom";
@@ -14,9 +14,9 @@ import { AddComment } from "../AddComment";
 import { Comment } from "../Comment";
 import restaurant from "../../img/restaurant.png";
 
-export function Place({ place, handleDelete }) {
+export function Place({ place, favoritePlace}) {
   //getting the user
-  const { user, setUser } = useContext(AuthContext);
+  const { user, setUser, getPlaces} = useContext(AuthContext);
   //const [place, setPlace] = useState("");
 
   const [addComment, setAddComment] = useState(false);
@@ -32,15 +32,39 @@ export function Place({ place, handleDelete }) {
     // client.put(`/place/${place._id}`);
   };
 
+  const handleDelete = async (id) => {
+    await client.delete(`/place/${id}`);
+    getPlaces()
+  };
+
+  const calculateIsFavorite = () => {
+    
+    const aPlace = user?.favorite.find((fav) => {
+      return fav._id === place._id
+    })
+    console.log(aPlace)
+    setIsFavorite(!!aPlace)
+  }
+
+  useEffect(() => {
+    calculateIsFavorite();
+  }, [user]);
+
   const handleSave = async () => {
     //request to backend by sending the userId and placeId from frontend
     const newUser = await client.put("/user/favorites", {
       userId: user._id,
       placeId: place._id,
     });
-    console.log(newUser);
+  // console.log(newUser);
     setUser(newUser.data);
     //navigate('/favorites');
+  };
+
+  const handleShowAll = () => {
+    setShowAll((previousValue) => {
+      return !previousValue;
+    });
   };
 
   /*   const handleUnSave = () => {
@@ -66,8 +90,9 @@ export function Place({ place, handleDelete }) {
   };
 
   return (
-    <div className={styles.placeCard}>
-      {/* {console.log(user, 'this is our user')} */}
+    <>
+      {user && 
+      (<div className={styles.placeCard}>
       <div className={styles.header}>
         <div className={styles.image}>
           <img
@@ -109,7 +134,20 @@ export function Place({ place, handleDelete }) {
         {place.createdAt.split("T")[0]}
       </div>
       <div className={styles.description}>
-        <p>{place.description}</p>
+        {/* <p>{place.description}</p> */}
+        {showAll ?
+          (<p>{place.description}</p>)
+        :
+          (<p> {`${place.description.substring(0, 100)}`}
+          </p>)
+        }
+         <div className={styles.showAll}> 
+        {place.description.length > 100 && (
+            <button className={styles.readBtn} onClick={handleShowAll}>
+              {showAll ? "Read less" : "Read more"}
+            </button>
+          )}
+          </div>
       </div>
 
       <div className={styles.bottom}>
@@ -123,8 +161,9 @@ export function Place({ place, handleDelete }) {
               }
             })}
 
-          {user._id && isFavorite ? (
-            <button className={styles.save}>
+          {user._id && 
+          isFavorite ? (
+            <button className={styles.save} >
               <MdOutlineFavorite /> Added to Favourite
             </button>
           ) : (
@@ -152,6 +191,8 @@ export function Place({ place, handleDelete }) {
           ))}
         </ul>
       )}
-    </div>
+    </div>)}
+    </>
+    
   );
 }
