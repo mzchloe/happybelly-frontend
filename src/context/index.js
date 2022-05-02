@@ -85,7 +85,7 @@ navigate('/login')
   //verify function 
   const verify = async () => {
     try { 
-      const response = await client.get('auth/verify')
+      const response = await client.post('auth/verify')
       const user = await client.get('/user')
      // console.log(user)
       setUser (user.data)
