@@ -141,3 +141,15 @@ a:link, a:visited, a:active, a:hover {
     color: #212427;
 }
 
+@media (max-width: 600px) {
+    .favoriteBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(254, 164, 91, 0.3);
+        border-radius: 0.8em;
+        padding: 10px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+  }
