@@ -2,7 +2,7 @@ import styles from "./LandingPage.module.css";
 //import { Signup, Login } from "../../components";
 import { Link } from "react-router-dom";
 import photo from "../../img/hero.jpg";
-import logo from "../../img/happybelly.svg";
+import logo from "../../happybelly-logo.svg";
 
 export function LandingPage() {
   return (
