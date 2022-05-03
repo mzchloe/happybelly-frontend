@@ -4,6 +4,11 @@
     margin: 10px;
 }
 
+.required:after {
+    content:" *";
+    color: #212427;
+}
+
 .updatePlace {
     /* border: 1px solid black; */
     display: flex;
@@ -27,4 +32,19 @@ textarea {
     color: white;
     border-radius: 0.8em;
     width: 90vw;
+}
+
+label {
+    display: flex;
+    padding-left: 5px;
+ /*    font-weight: bold; */
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.smallText {
+    display: flex;
+    padding: 10px 5px 10px 5px;
+    font-size: 0.8em;
+    font-style: italic;
 }
