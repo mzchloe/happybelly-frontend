@@ -10,14 +10,6 @@
   
 }
 
-a:link, a:visited, a:active, a:hover {
-  color: black;
-}
-
-button {
-  text-decoration: none;
-}
-
 .textColor {
   color: #212427;
 }
