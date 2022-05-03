@@ -69,7 +69,7 @@ const [placeEdit, setPlaceEdit] = useState("");
     
       <form onSubmit={handleUpdate} className={styles.updatePlace}>
         <h2>Edit Place</h2>
-
+        <label for="email">Name of place</label>
         <input
           id="name"
           value={name}
@@ -78,6 +78,7 @@ const [placeEdit, setPlaceEdit] = useState("");
           }}
           placeholder="Name of the restaurant*"
         />
+         <label for="address">Address</label>
         <input
           id="address"
           value={address}
@@ -86,6 +87,7 @@ const [placeEdit, setPlaceEdit] = useState("");
           }}
           placeholder="Address of the restaurant"
         />
+         <label for="city">City location</label>
         <input
           id="city"
           value={city}
@@ -95,14 +97,16 @@ const [placeEdit, setPlaceEdit] = useState("");
           placeholder="Which city is it located at?*"
         />
         {/* Change to a dropdown menu */}
+        <label for="dietaryType">Special Dietary Needs</label>
         <input
           id="dietaryType"
           value={dietaryType}
           onChange={(e) => {
             setDietaryType(e.target.value);
           }}
-          placeholder="Choose the type of diet from the list*"
+          placeholder="Is it gluten-free/coeliac, lactose- or diary-free, FODMAP-friendly?*"
         />
+        <label for="description">Share your experience!</label>
         <textarea
           id="description"
           value={description}
