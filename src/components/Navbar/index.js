@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.css";
-import logo from "../../happybelly.svg";
+import logo from "../../happybelly-logo.svg";
 import { Link } from "react-router-dom";
 
 export function Navbar() {
