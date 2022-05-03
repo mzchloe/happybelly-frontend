@@ -164,7 +164,7 @@ export function Place({ place, favoritePlace}) {
           {user._id && 
           isFavorite ? (
             <button className={styles.save} >
-              <MdOutlineFavorite /> Added to Favourite
+            {/*   <MdOutlineFavorite />  */}Added to Favourite
             </button>
           ) : (
             <button
@@ -173,7 +173,7 @@ export function Place({ place, favoritePlace}) {
                 handleSave();
               }}
             >
-              <MdOutlineFavoriteBorder /> Add to Favourite
+            {/*   <MdOutlineFavoriteBorder /> */} Add to Favourite
             </button>
           )}
         </div>
