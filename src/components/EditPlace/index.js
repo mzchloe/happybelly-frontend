@@ -68,8 +68,8 @@ const [placeEdit, setPlaceEdit] = useState("");
     <div className={styles.editContainer}>
     
       <form onSubmit={handleUpdate} className={styles.updatePlace}>
-        <h2>Edit Place</h2>
-        <label for="email">Name of place</label>
+       {/*  <h2>Edit Your Review</h2> */}
+        <label for="email" className={styles.required}>Name of place</label>
         <input
           id="name"
           value={name}
@@ -87,7 +87,7 @@ const [placeEdit, setPlaceEdit] = useState("");
           }}
           placeholder="Address of the restaurant"
         />
-         <label for="city">City location</label>
+         <label for="city" className={styles.required}>City location</label>
         <input
           id="city"
           value={city}
@@ -97,7 +97,7 @@ const [placeEdit, setPlaceEdit] = useState("");
           placeholder="Which city is it located at?*"
         />
         {/* Change to a dropdown menu */}
-        <label for="dietaryType">Special Dietary Needs</label>
+        <label for="dietaryType" className={styles.required}>Special Dietary Needs</label>
         <input
           id="dietaryType"
           value={dietaryType}
@@ -106,7 +106,7 @@ const [placeEdit, setPlaceEdit] = useState("");
           }}
           placeholder="Is it gluten-free/coeliac, lactose- or diary-free, FODMAP-friendly?*"
         />
-        <label for="description">Share your experience!</label>
+        <label for="description" className={styles.required}>Share your experience</label>
         <textarea
           id="description"
           value={description}
@@ -115,7 +115,8 @@ const [placeEdit, setPlaceEdit] = useState("");
           }} 
           placeholder="Please share the experience you had with other members, it can be a dish you had, or special request you made.*"
         />
-        <button className={styles.saveBtn}>Save</button>
+        <span className={styles.smallText}>(*) required fields</span>
+        <button className={styles.saveBtn}>SAVE CHANGES</button>
       </form>
     </div>
   );
