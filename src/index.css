@@ -13,3 +13,10 @@ code {
     monospace;
 }
 
+a:link, a:visited, a:active, a:hover {
+  color: #212427;
+}
+
+button {
+  text-decoration: none;
+}
