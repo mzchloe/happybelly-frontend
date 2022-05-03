@@ -9,4 +9,15 @@
 
 textarea {
     height: 15vh;
+    width: 85vw;
+}
+
+.saveBtn {
+    border: none;
+    padding: 10px;
+    background-color: #92C24C;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: white;
+    border-radius: 0.8em;
 }
