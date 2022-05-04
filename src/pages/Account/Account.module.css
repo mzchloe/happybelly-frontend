@@ -28,6 +28,10 @@
     line-height: 1.6em;
 }
 
+.profileinfo {
+    display: flex;
+    flex-direction: column;
+}
 .logout {
     border: none;
     background-color: inherit;
