@@ -20,7 +20,7 @@ export function Account() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.favorites}>
+     
         {/* <h3>My Profile</h3> */}
         {user && (<div className={styles.profile}>
           <img
@@ -30,18 +30,18 @@ export function Account() {
             src={profile}
             alt="profile_image"
           />
-          <span>
-     
-            <b>
+          <b>
               {user.firstName} {user.lastName}
             </b>
-          </span>
+            <div className={styles.profileinfo}>
           <span>Username {user.username}</span>
           <span>Email: {user.email}</span>
           <span>Change Password </span>
+          </div>
         </div>)
       }
         <h3>My Favorites</h3>
+        <div className={styles.favorites}>
       </div>
 
       {/* My Reviews  */}
