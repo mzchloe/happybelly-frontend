@@ -21,6 +21,7 @@ input {
     width: 90vw;
     font-style: italic;
     outline: none;   
+    max-width: 90vw;
 }
 
 input:focus {
@@ -43,6 +44,7 @@ input:focus {
     font-weight: bolder;
     color: white;
     border-radius: 0.8em;
+    max-width: 90vw;
 }
 
 .clearBtn {
@@ -53,6 +55,7 @@ input:focus {
     text-transform: uppercase;
     padding: 10px;
     border-radius: 0.8em;
+    max-width: 90vw;
     
 }
 
@@ -68,6 +71,9 @@ textarea {
 	padding: 8px;
 	box-shadow: 0px 4px 10px -8px black;
     font-family: inherit;
+    max-width: 90vw;
+    white-space: pre-line;
+    overflow-wrap: break-word;
 }
 
 .form {
