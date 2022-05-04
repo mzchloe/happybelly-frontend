@@ -17,6 +17,9 @@ a:link, a:visited, a:active, a:hover {
   color: #212427;
 }
 
-button {
-  text-decoration: none;
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
 }

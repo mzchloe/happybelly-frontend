@@ -18,3 +18,10 @@
     background-size: 20px;
     border-radius: 1em;
 }
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
