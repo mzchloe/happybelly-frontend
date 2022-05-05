@@ -30,11 +30,11 @@ export function Places() {
 
     return (
         <div className={styles.container}>
-        <div className={styles.search}>
+     {/*    <div className={styles.search}>
             <input className={styles.input} type="search" placeholder="Search by restaurant name or city">
           
             </input>
-        </div>
+        </div> */}
         {/* <div className={styles.places}> */}
             <ListOfPlaces places={places} handleDelete={handleDelete}/>
         </div>
