@@ -28,9 +28,9 @@ export function Place({ place, favoritePlace}) {
   //console.log(user._id, place.author._id, place._id)
   let navigate = useNavigate();
 
-  const handleEdit = () => {
+  const handleEdit = (e) => {
+    e.preventDefault()
     navigate(`/editPlace/${place._id}`);
-    // client.put(`/place/${place._id}`);
   };
 
   const handleDelete = async (id) => {
@@ -43,7 +43,7 @@ export function Place({ place, favoritePlace}) {
     const aPlace = user?.favorite.find((fav) => {
       return fav._id === place._id
     })
-    console.log(aPlace)
+   // console.log(aPlace)
     setIsFavorite(!!aPlace)
   }
 
@@ -120,7 +120,7 @@ export function Place({ place, favoritePlace}) {
             </button>
           )}
           {user._id === place.author._id && (
-            <button className={styles.edit} onClick={handleEdit}>
+            <button className={styles.edit} onClick={(e) => {handleEdit(e)}}>
               <MdModeEdit />
             </button>
           )}
