@@ -1,7 +1,7 @@
 import styles from "./Signup.module.css";
 import { useState, useContext } from "react";
 import { AuthContext } from "../../context";
-import logo from "../../img/happybelly.svg";
+import logo from "../../happybelly-logo.svg";
 import { Link } from "react-router-dom";
 
 export function Signup() {
