@@ -34,8 +34,9 @@ h2 {
     justify-content: center;
     padding: 10px;
     margin: 20px;
-    background-color: rgba(254, 164, 91, 0.3);
+    background-color: rgba(254, 164, 91, 0.1);
     border-radius: 1.2em;
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .categoryLearnCard {
@@ -46,6 +47,7 @@ h2 {
     margin: 20px;
     background-color: rgba(252, 217, 73, 0.3);
     border-radius: 1.2em;
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .categoryCityCard{
@@ -84,10 +86,10 @@ h2 {
     flex-direction: column;
 }
 
-.city__img {
-    opacity: 0.5;
-}
-
-.community__img {
+.city__img, 
+.community__img,
+.learn__img,
+.tips__img
+{
     opacity: 0.5;
 }
