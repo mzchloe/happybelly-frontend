@@ -14,6 +14,7 @@ import { AddComment } from "../AddComment";
 import { Comment } from "../Comment";
 import restaurant from "../../img/restaurant.png";
 
+
 export function Place({ place, favoritePlace}) {
   //getting the user
   const { user, setUser, getPlaces} = useContext(AuthContext);
@@ -136,7 +137,7 @@ export function Place({ place, favoritePlace}) {
       <div className={styles.description}>
         {/* <p>{place.description}</p> */}
         {showAll ?
-          (<p>{place.description}</p>)
+          (<p style={{"white-space": "pre-line"}}>{place.description}</p>)
         :
           (<p> {`${place.description.substring(0, 100)}`}
           </p>)
@@ -164,7 +165,7 @@ export function Place({ place, favoritePlace}) {
           {user._id && 
           isFavorite ? (
             <button className={styles.save} >
-              <MdOutlineFavorite /> Added to Favourite
+              <MdOutlineFavorite /> Favourite
             </button>
           ) : (
             <button
@@ -178,8 +179,7 @@ export function Place({ place, favoritePlace}) {
           )}
         </div>
         <div className={styles.comment} onClick={toggleShowComment}>
-          <MdOutlineModeComment />
-          <button className={styles.commentBtn}>Comments</button>
+          <button className={styles.commentBtn}> <MdOutlineModeComment /> Comments</button>
         </div>
       </div>
 
