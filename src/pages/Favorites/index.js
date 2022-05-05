@@ -11,9 +11,9 @@ export function Favorites(favorites) {
     }
     return (
       <ul className={styles.listOfFavorites}>
-        <div className={styles.container}>My Favorite Places
+       {user && <div className={styles.container}>My Favorite Places
         <ListOfPlaces places={user.favorite}/>
-        </div>
+        </div>}
         </ul>
         
     )
