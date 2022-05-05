@@ -1,10 +1,15 @@
 import styles from "./ListOfPlaces.module.css";
 import { Place } from "../Place";
+import { useContext } from "react";
+import { AuthContext } from "../../context";
 
 export function ListOfPlaces({ places, handleDelete, favoritePlace=false }) {
 
+  const { user } = useContext(AuthContext)
+
   return (
-    <ul className={styles.listContainer}>
+    <>
+    {user && <ul className={styles.listContainer}>
       {places
         .sort((oldestReview, newestReview) => {
           let oldestReviewDate = new Date(oldestReview.createdAt.toString())
@@ -25,6 +30,7 @@ export function ListOfPlaces({ places, handleDelete, favoritePlace=false }) {
             </div>
           );
         })}
-    </ul>
+    </ul>}
+    </>
   );
 }
