@@ -23,6 +23,10 @@ textarea {
   color: #212427;
 }
 
+textarea {
+  white-space: pre-line;
+}
+
 .body {
   text-align: center;
   
