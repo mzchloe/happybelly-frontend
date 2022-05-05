@@ -11,6 +11,7 @@ export function Account() {
   const { logout } = useContext(AuthContext);
 
   const [myReviews, setMyReviews] = useState(false);
+  const [showProfile, setShowProfile] = useState(false);
 
   const toggleReviews = () => {
     setMyReviews((previousValue) => {
@@ -18,12 +19,18 @@ export function Account() {
     });
   };
 
+  const toggleProfile = () => {
+    setShowProfile((previousValue) => {
+      return !previousValue;
+    });
+  };
+
   return (
     <div className={styles.container}>
-     
-        {/* <h3>My Profile</h3> */}
-        {user && (<div className={styles.profile}>
-          <img
+      {/* <h3>My Profile</h3> */}
+      {user && (
+        <div className={styles.profile}>
+          <div className={styles.image}> <img
             width={60}
             height={60}
             className={styles.profile__img}
@@ -31,25 +38,36 @@ export function Account() {
             alt="profile_image"
           />
           <b>
-              {user.firstName} {user.lastName}
-            </b>
+            {user.firstName} {user.lastName}
+          </b>
+</div>
+          <button className={styles.reviews} onClick={toggleProfile}>
+            <h3>My Profile</h3>
+          </button>
+          {showProfile && (
             <div className={styles.profileinfo}>
-          <span>Username {user.username}</span>
-          <span>Email: {user.email}</span>
-          <span>Change Password </span>
-          </div>
-        </div>)
-      }
-        <h3>My Favorites</h3>
-        <div className={styles.favorites}>
-      </div>
+              <span>{user.username}</span>
+              <span>{user.email}</span>
+            </div>
+          )}
+        </div>
+      )}
+      {/* <hr className={styles.lineComments}></hr> */}
+      <h3>
+        {" "}
+        <Link className={styles.link} to="/favorites">
+          My Favorites
+        </Link>
+      </h3>
+      <div className={styles.favorites}></div>
 
+      {/* <hr className={styles.lineComments}></hr> */}
       {/* My Reviews  */}
       <button className={styles.reviews} onClick={toggleReviews}>
         <h3>My Reviews</h3>
       </button>
       {myReviews && <MyPlaces />}
-
+      <hr className={styles.lineComments}></hr>
       {/* Logout  */}
       <button className={styles.logout}>
         <Link className={styles.link} onClick={logout} to="/">
