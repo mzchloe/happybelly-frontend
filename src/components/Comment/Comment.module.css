@@ -24,14 +24,14 @@
 }
 
 .postedBy{
-    font-size: 0.7em;
+    font-size: 0.9em;
     font-style: italic;
     justify-content: flex-end;
     align-items: center;
 }
 
 .comment {
-    font-size: 0.7em;
+    font-size: 1em;
     /* text-align: end; */
     padding: 10px;
 }
