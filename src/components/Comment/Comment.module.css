@@ -10,16 +10,24 @@
     /* border: 1px solid lightgray; */
 }
 
+.image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 .commentBody {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: fit-content;
+    gap: 10px;
 }
 
 .postedBy{
     font-size: 0.7em;
     font-style: italic;
-    text-align: end;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .comment {
@@ -30,6 +38,7 @@
 .btns {
     display: flex;
     gap: 10px;
+    justify-content: flex-end;
 }
 
 .delete {
@@ -46,6 +55,6 @@
 
 .bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 10px;
 }
