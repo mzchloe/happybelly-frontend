@@ -43,7 +43,7 @@
     justify-content: flex-start;
 }
 
-.edit, .delete, .save {
+.edit, .delete, .save, .commentBtn {
     border: none;   
     background: none;
     /* border: 1px solid black; */
@@ -116,18 +116,18 @@
     text-decoration: none;
 }
 
-.comment {
+/* .comment {
     border: none;
     background-color: rgba(254, 164, 91, 0.3);
     border-radius: 0.8em;
     padding: 5px 8px 5px 8px;
-}
+} */
 
 .commentBtn {
     border: none;
-    background-color: rgba(254, 164, 91, 0.1);
+    background-color: rgba(254, 164, 91, 0.3);
     border-radius: 0.8em;
-    padding: 5px 8px 5px 8px;
+    padding: 10px;
 }
 
 .readBtn {
@@ -140,16 +140,3 @@
 a:link, a:visited, a:active, a:hover {
     color: #212427;
 }
-
-@media (max-width: 600px) {
-    .favoriteBtn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(254, 164, 91, 0.3);
-        border-radius: 0.8em;
-        padding: 10px;
-        font-weight: bold;
-        text-decoration: none;
-    }
-  }
