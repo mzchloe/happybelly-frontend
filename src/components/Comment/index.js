@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../context";
 import { client } from "../../client";
 import { MdDelete } from "react-icons/md";
+import userImg from "../../img/user2.png";
 
 export function Comment({ comment }) {
   const { user, getPlaces } = useContext(AuthContext);
@@ -15,18 +16,25 @@ export function Comment({ comment }) {
   return (
     <div className={styles.commentCard}>
       <hr className={styles.lineComments}></hr>
+      
       <div className={styles.commentBody}>
-      
+      <div className={styles.image}>
+          <img
+            width={20}
+            height={20}
+            className={styles.userImg__img}
+            src={userImg}
+            alt="userImg_image"
+          />
+        </div>
       <p className={styles.comment}>{comment.comment}</p>
-      
+     
+      </div>
       <div className={styles.bottom}> 
         <span className={styles.postedBy}>
           Commented on {comment.createdAt.split("T")[0]} by{" "}
           {comment.author.firstName} {comment.author.lastName}
-        </span>
-        </div>
-      
-        <div className={styles.btns}>
+        </span><div className={styles.btns}>
       
       {user._id === comment.author._id && (
         <div className={styles.deleteIcon}>
@@ -38,7 +46,10 @@ export function Comment({ comment }) {
         </div>
       )}
     </div>
-      </div>
+        </div>
+      
+       
+     
       
     </div>
   );
