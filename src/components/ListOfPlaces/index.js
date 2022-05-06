@@ -16,6 +16,7 @@ export function ListOfPlaces({ places, handleDelete, favoritePlace=false }) {
 
           let newestReviewDate = new Date(newestReview.createdAt.toString())
        
+          //console.log(places) 
           if (oldestReviewDate.getTime() < newestReviewDate.getTime()) {
             return 1
           } if (oldestReviewDate.getTime() > newestReviewDate.getTime()) {
