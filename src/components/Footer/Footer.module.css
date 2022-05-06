@@ -15,6 +15,9 @@
  
 }
 
+.navLink[aria-current="page"] {
+    filter: invert(98%) sepia(79%) saturate(0%) hue-rotate(140deg) brightness(107%) contrast(100%);
+}
 /* .home__img, .search__img, .add__img, .favorites__img, .account__img {
 filter: invert(7%) sepia(11%) saturate(892%) hue-rotate(168deg) brightness(88%) contrast(83%);
 } */
