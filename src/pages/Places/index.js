@@ -36,7 +36,7 @@ export function Places() {
             </input>
         </div> */}
         {/* <div className={styles.places}> */}
-            <ListOfPlaces places={places} handleDelete={handleDelete}/>
+            <ListOfPlaces places={places} handleDelete={handleDelete} showOptions/>
         </div>
         /* </div> */
         
