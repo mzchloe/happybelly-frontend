@@ -1,5 +1,5 @@
 import styles from "./Footer.module.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   MdAccountCircle,
   MdOutlineLogout,
@@ -22,7 +22,7 @@ export function Footer() {
     <div className={styles.footer}>
       {user ? (
         <div className={styles.menu}>
-        <Link className={styles.link} to="/home">
+        <NavLink className={styles.navLink} to="/home">
             <img
               width={30}
               height={30}
@@ -30,8 +30,8 @@ export function Footer() {
               src={home}
               alt="home_image"
             />
-          </Link>
-          <Link className={styles.link} to="/places">
+          </NavLink>
+          <NavLink className={styles.navLink} to="/places">
             <img
               width={30}
               height={30}
@@ -39,8 +39,8 @@ export function Footer() {
               src={search}
               alt="search_image"
             />
-          </Link>
-          <Link className={styles.link} to="/add">
+          </NavLink>
+          <NavLink className={styles.navLink} to="/add">
             <img
               width={30}
               height={30}
@@ -48,8 +48,8 @@ export function Footer() {
               src={add}
               alt="add_image"
             />
-          </Link>
-          <Link className={styles.link} to="/favorites">
+          </NavLink>
+          <NavLink className={styles.navLink} to="/favorites">
             <img
               width={30}
               height={30}
@@ -57,9 +57,9 @@ export function Footer() {
               src={favorites}
               alt="favorites_image"
             />
-          </Link>
+          </NavLink>
         
-          <Link className={styles.link} to="/account">
+          <NavLink className={styles.navLink} to="/account">
             <img
               width={30}
               height={30}
@@ -67,8 +67,8 @@ export function Footer() {
               src={account}
               alt="account__image"
             />
-          </Link>
-          <Link className={styles.link} to="/"></Link>
+          </NavLink>
+          <NavLink className={styles.navLink} to="/"></NavLink>
         </div>
       ) : (
         <p> </p>
