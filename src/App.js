@@ -10,12 +10,14 @@ function App() {
   const { user } = useContext(AuthContext)
 
   return (
+    <div className={styles.appContainer}> 
     <div className={styles.textColor}>
 
   { user &&  <Navbar />}
     <Outlet />
   { user &&  <Footer />}
     <Copyright />
+    </div>
     </div>
   );
 }
