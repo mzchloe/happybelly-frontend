@@ -28,12 +28,6 @@ const getFavorites = async () => {
 
   setFavorites(result.data);
 }
-//make comments available other places
-
-/* const getComments = async () => {
-  const result = await client.get('/comment');
-  getComments(result.data);
-} */
 
   //saving the token
   const saveToken = (token) => {
