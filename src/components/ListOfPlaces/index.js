@@ -3,35 +3,47 @@ import { Place } from "../Place";
 import { useContext } from "react";
 import { AuthContext } from "../../context";
 
-export function ListOfPlaces({ places, handleDelete, favoritePlace=false }) {
-
-  const { user } = useContext(AuthContext)
+export function ListOfPlaces({
+  places,
+  handleDelete,
+  favoritePlace = false,
+  showOptions,
+}) {
+  //access to the user using AuthContext
+  const { user } = useContext(AuthContext);
 
   return (
     <>
-    {user && <ul className={styles.listContainer}>
-      {places
-        .sort((oldestReview, newestReview) => {
-          let oldestReviewDate = new Date(oldestReview.createdAt.toString())
+      {user && places && (
+        <ul className={styles.listContainer}>
+          {places
+            .sort((oldestReview, newestReview) => {
+              let oldestReviewDate = new Date(oldestReview.createdAt);
+              let newestReviewDate = new Date(newestReview.createdAt);
 
-          let newestReviewDate = new Date(newestReview.createdAt.toString())
-       
-          //console.log(places) 
-          if (oldestReviewDate.getTime() < newestReviewDate.getTime()) {
-            return 1
-          } if (oldestReviewDate.getTime() > newestReviewDate.getTime()) {
-            return -1 
-          } return 0
-  
-        })
-        .map((place) => {
-          return (
-            <div key={place._id}>
-              <Place place={place} handleDelete={handleDelete} favoritePlace={favoritePlace}/>
-            </div>
-          );
-        })}
-    </ul>}
+              //console.log(places)
+              if (oldestReviewDate < newestReviewDate) {
+                return 1;
+              } else {
+                return -1;
+              }
+            })
+            .map((place) => {
+              return (
+                <li key={place._id} className={styles.listOfItems}>
+                  {/* props here places/ handleDelete and favoritePlace are passed from the parent ListOfPlaces above */}
+                  <Place
+                    key={place._id}
+                    place={place}
+                    handleDelete={handleDelete}
+                    favoritePlace={favoritePlace}
+                    showOptions={showOptions}
+                  />
+                </li>
+              );
+            })}
+        </ul>
+      )}
     </>
   );
 }
