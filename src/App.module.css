@@ -23,6 +23,11 @@ textarea {
   color: #212427;
 }
 
+.appContainer {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 textarea {
   white-space: pre-line;
 }
