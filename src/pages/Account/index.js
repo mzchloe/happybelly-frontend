@@ -30,23 +30,27 @@ export function Account() {
       {/* <h3>My Profile</h3> */}
       {user && (
         <div className={styles.profile}>
-          <div className={styles.image}> <img
-            width={60}
-            height={60}
-            className={styles.profile__img}
-            src={profile}
-            alt="profile_image"
-          />
-          <b>
-            {user.firstName} {user.lastName}
-          </b>
-</div>
+          <div className={styles.image}>
+            {" "}
+            <img
+              width={60}
+              height={60}
+              className={styles.profile__img}
+              src={profile}
+              alt="profile_image"
+            />
+            <span className={styles.name}>
+              {user.firstName} {user.lastName}
+            </span>
+          </div>
           <button className={styles.reviews} onClick={toggleProfile}>
             <h3>My Profile</h3>
           </button>
           {showProfile && (
             <div className={styles.profileinfo}>
+            <span><b>Username</b></span>
               <span>{user.username}</span>
+              <span><b>Email</b></span>
               <span>{user.email}</span>
             </div>
           )}
