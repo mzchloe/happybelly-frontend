@@ -1,4 +1,20 @@
 .container {
     overflow: scroll;
     height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete {
+    border: none;
+    padding: 10px;
+    background-color: #92C24C;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: white;
+    border-radius: 0.8em;
+    max-width: 90vw;
+    width: 90vw;
 }
