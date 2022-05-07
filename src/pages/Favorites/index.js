@@ -20,9 +20,9 @@ export function Favorites(favorites) {
     <ul className={styles.listOfFavorites}>
       {user && (
         <div className={styles.container}>
-          My Favorite Places
+          <h2>My Favorite Places</h2>
           {user.favorite?.length > 0 && (
-            <button onClick={handleDeleteList}>Remove List</button>
+            <button className={styles.delete} onClick={handleDeleteList}>Delete List</button>
           )}
           <ListOfPlaces places={user.favorite} />
         </div>
