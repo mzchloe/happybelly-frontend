@@ -34,6 +34,11 @@
     line-height: 1.6em;
 }
 
+.name {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
 .profileinfo {
     display: flex;
     flex-direction: column;
