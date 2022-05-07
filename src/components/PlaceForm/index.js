@@ -105,7 +105,6 @@ export function PlaceForm() {
           placeholder="Share your experiences of this place with other community members"
         />
         <button className={styles.addBtn}>Submit review</button>
-        <button className={styles.clearBtn}>Clear form</button>
       </form>
     </div>
   );
